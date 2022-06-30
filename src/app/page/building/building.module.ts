@@ -1,14 +1,19 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { BuildingRoutingModule } from './building-routing.module';
-
+import {BuildingRoutingModule} from './building-routing.module';
+import {BuildComponent} from './build/build.component';
+import {SharedModule} from '../../shared/shared.module'
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    BuildComponent,
+  ],
   imports: [
     CommonModule,
-    BuildingRoutingModule
+    BuildingRoutingModule,
+    SharedModule
   ]
 })
-export class BuildingModule { }
+export class BuildingModule {
+}
