@@ -5,8 +5,11 @@
   </button>
   <span>My App</span>
   <mat-menu #animals="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+<!--    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>-->
+<!--    <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>-->
+    <button mat-menu-item routerLink="/building/build">Build</button>
+    <button mat-menu-item routerLink="/building/drag-drop">From</button>
+    <button mat-menu-item routerLink="/building/view-data">View Data</button>
   </mat-menu>
 
   <mat-menu #vertebrates="matMenu">

@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <table>
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>Country</th>
+      </tr>
+      <tr *ngFor="let data of savedData;let i = index;">
+        <td>{{i + 1}}</td>
+        <td>{{data?.nameImg}}</td>
+        <td>
+          <button (click)="loadData(i)">View</button></td>
+      </tr>
+    </table>
+  </div>
+  <div class="image-container" *ngIf="backgroundImage" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+    <div
+      class="text-item"
+      *ngFor="let text of texts"
+      [ngStyle]="{'top.px': text.top, 'left.px': text.left, 'width.px': text.width, 'height.px': text.height}">
+      <input type="text" [(ngModel)]="text.content" [style.width.px]="text.width" [style.height.px]="text.height"/>
+    </div>
+  </div>
+</div>

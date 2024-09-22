@@ -1,0 +1,17 @@
+<div class="container">
+  <input type="file" (change)="onFileSelected($event)" />
+  <div class="image-container" *ngIf="backgroundImage" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+    <div
+      class="draggable"
+      *ngFor="let text of texts"
+      [ngStyle]="{'top.px': text.top, 'left.px': text.left, 'width.px': text.width, 'height.px': text.height}"
+      (mousedown)="startDrag($event, text)">
+      <input type="text" [(ngModel)]="text.content" [style.width.px]="text.width" [style.height.px]="text.height"/>
+      <div class="resize-handle" (mousedown)="startResize($event, text)"></div>
+    </div>
+  </div>
+  <input type="text" [(ngModel)]="nameImg" />
+  <button (click)="addText()">Add Text</button>
+  <button (click)="saveData()">Save</button>
+  <button (click)="loadData()">Load</button>
+</div>

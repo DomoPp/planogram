@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.draggable {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+}
+
+.draggable input {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  cursor: se-resize;
+  user-select: none;
+}
